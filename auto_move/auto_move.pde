@@ -283,11 +283,14 @@ void autoPutStone()
   // パスでなければ置く。手番を変える。連続パス回数を０にする
   if( m.x != 0 )
   {
-
+    put(ban,teban,m.x,m.y);
+    teban=-teban;
+    passcount=0;
   }
   // パスなら、手番を変える。連続パス回数を１増やす。
   else
   {
-
+    teban=-teban;
+    passcount++;
   }
 }
